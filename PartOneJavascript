@@ -555,5 +555,23 @@ console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`);
 
 // If you get stuck during this project or would like to see an experienced developer work through it, click “Get Unstuck“ to see a project walkthrough video.
 
+// Dog years to human years
+
+// My age
+var myAge = 60;
+
+var earlyYears = 2;
+earlyYears *= 10.5;
+
+myAge -= 2;
+
+let laterYears = myAge - 2;
+
+laterYears *= 4;
+var myAgeInDogYears = earlyYears + laterYears;
+var myName = 'Tim'.toLowerCase();
+
+
+console.log(`My name is ${myName}. I am ${myAgeInDogYears} years old in dog years.`);
 
 
