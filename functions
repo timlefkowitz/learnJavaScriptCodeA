@@ -361,3 +361,157 @@ Concise Body Arrow Functions
 // Let’s refactor plantNeedsWater() to be a concise body. Notice that we’ve already converted the if/else statement to a ternary operator to make the code fit on one line.
 
 const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+
+
+
+SCOPE
+// Blocks and Scope
+// Before we talk more about scope, we first need to talk about blocks.
+
+// We’ve seen blocks used before in functions and if statements. A block is the code found inside a set of curly braces {}. Blocks help us group one or more statements together and serve as an important structural marker for our code.
+
+// A block of code could be a function, like this:
+
+// const logSkyColor = () => {
+//   let color = 'blue'; 
+//   console.log(color); // blue 
+// }
+// Notice that the function body is actually a block of code.
+
+// Observe the block in an if statement:
+
+// if (dusk) {
+//   let color = 'pink';
+//   console.log(color); // pink
+// }
+// In the next few exercises, we’ll see how blocks define the scope of variables.
+
+// Instructions
+// 1.
+// At the top of main.js, declare a const variable, named city set equal to 'New York City'. This variable will exist outside of the block.
+
+// 2.
+// Below the city variable, write a function named logCitySkyline.
+
+
+// Stuck? Get a hint
+// 3.
+// Inside of the function body of logCitySkyline(), write another variable using let named skyscraper and set it equal to 'Empire State Building'.
+
+
+// Stuck? Get a hint
+// 4.
+// Inside the function, include a return statement like this:
+
+// return 'The stars over the ' + skyscraper + ' in ' + city;
+
+// Stuck? Get a hint
+// 5.
+// Beneath the logCitySkyline() function, use console.log() to log the value of logCitySkyline() to the console.
+
+// You’ll notice that the logCitySkyline() function is able to access both variables without any problems. In the next exercise we’ll consider why would it be preferable to have one variable outside of a block and the other inside of a block.
+
+const city = 'New York City';
+
+function logCitySkyline(){
+  let skyscraper = 'Empire State Building';
+  return 'The stars over the ' + skyscraper + ' in ' + city;
+}
+
+console.log(logCitySkyline())
+
+
+SCOPE
+// Global Scope
+// Scope is the context in which our variables are declared. We think about scope in relation to blocks because variables can exist either outside of or within these blocks.
+
+// In global scope, variables are declared outside of blocks. These variables are called global variables. Because global variables are not bound inside a block, they can be accessed by any code in the program, including code in blocks.
+
+// Let’s take a look at an example of global scope:
+
+// const color = 'blue';
+ 
+// const returnSkyColor = () => {
+//   return color; // blue 
+// };
+ 
+// console.log(returnSkyColor()); // blue
+// Even though the color variable is defined outside of the block, it can be accessed in the function block, giving it global scope.
+// In turn, color can be accessed within the returnSkyColor function block.
+// Let’s work with global variables to see how data can be accessible from any place within a program.
+
+// Instructions
+// 1.
+// At the top of main.js, write three global variables:
+
+// Name the first variable satellite and set it equal to 'The Moon'.
+// Name the second variable galaxy and set it equal to 'The Milky Way'.
+// Name the third variable stars and set it equal to 'North Star'.
+
+// Stuck? Get a hint
+// 2.
+// Below the variables created in the previous step, write a function named callMyNightSky. Inside the function, include a return statement like this:
+
+// return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+
+// Stuck? Get a hint
+// 3.
+// Beneath the callMyNightSky() function, use console.log() to log the value of callMyNightSky() to the console.
+
+// You’ll notice that the function block for callMyNightSky() is able to access the global variables freely since the variables are available to all lines of code in the file.
+
+//
+const satellite = 'The Moon';
+const galaxy = 'The Milky Way';
+const stars = 'North Star';
+
+function callMyNightSky(){
+  return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+}
+
+console.log(callMyNightSky())
+
+
+SCOPE
+// Block Scope
+// The next context we’ll cover is block scope. When a variable is defined inside a block, it is only accessible to the code within the curly braces {}. We say that variable has block scope because it is only accessible to the lines of code within that block.
+
+// Variables that are declared with block scope are known as local variables because they are only available to the code that is part of the same block.
+
+// Block scope works like this:
+
+// const logSkyColor = () => {
+//   let color = 'blue'; 
+//   console.log(color); // blue 
+// };
+ 
+// logSkyColor(); // blue 
+// console.log(color); // ReferenceError
+// You’ll notice:
+
+// We define a function logSkyColor().
+// Within the function, the color variable is only available within the curly braces of the function.
+// If we try to log the same variable outside the function, it throws a ReferenceError.
+// Instructions
+// 1.
+// In main.js, define a function logVisibleLightWaves().
+
+
+// Stuck? Get a hint
+// 2.
+// Within the logVisibleLightWaves() function, using const, create a variable lightWaves and set it equal to 'Moonlight'.
+
+// 3.
+// Within the logVisibleLightWaves() function, beneath the lightWaves variable, add a console.log() statement that will log the value of the lightWaves variable when the function runs.
+
+
+// Stuck? Get a hint
+// 4.
+// Call the logVisibleLightWaves() function from outside the function.
+
+
+// Stuck? Get a hint
+// 5.
+// Beneath the function call, log the value of lightWaves to the console from outside the function.
+
+// You’ll notice that it logs a ReferenceError since the variable is tied to the block scope of the function!
