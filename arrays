@@ -198,3 +198,159 @@ const objectives = ['Learn a new languages', 'Read 52 books', 'Run a marathon'];
 console.log(objectives.length)
 
 
+ARRAYS
+// The .push() Method
+// Let’s learn about some built-in JavaScript methods that make working with arrays easier. These methods are specifically called on arrays to make common tasks, like adding and removing elements, more straightforward.
+
+// One method, .push() allows us to add items to the end of an array. Here is an example of how this is used:
+
+// const itemTracker = ['item 0', 'item 1', 'item 2'];
+ 
+// itemTracker.push('item 3', 'item 4');
+ 
+// console.log(itemTracker); 
+// // Output: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4'];
+// So, how does .push() work?
+
+// We access the push method by using dot notation, connecting push to itemTracker with a period.
+// Then we call it like a function. That’s because .push() is a function and one that JavaScript allows us to use right on an array.
+// .push() can take a single argument or multiple arguments separated by commas. In this case, we’re adding two elements: 'item 3' and 'item 4' to itemTracker.
+// Notice that .push() changes, or mutates, itemTracker. You might also see .push() referred to as a destructive array method since it changes the initial array.
+// If you’re looking for a method that will mutate an array by adding elements to it, then .push() is the method for you!
+
+// Instructions
+// 1.
+// Add two elements to the chores array using .push().
+
+// Checkpoint 2 Passed
+
+// Stuck? Get a hint
+// 2.
+// Use console.log to print your chores array to make sure your items were added.
+
+// 
+const chores = ['wash dishes', 'do laundry', 'take out trash'];
+
+
+chores.push('laundry','wash car')
+console.log(chores)
+
+ARRAYS
+// The .pop() Method
+// Another array method, .pop(), removes the last item of an array.
+
+// const newItemTracker = ['item 0', 'item 1', 'item 2'];
+ 
+// const removed = newItemTracker.pop();
+ 
+// console.log(newItemTracker); 
+// // Output: [ 'item 0', 'item 1' ]
+// console.log(removed);
+// // Output: item 2
+// In the example above, calling .pop() on the newItemTracker array removed item 2 from the end.
+// .pop() does not take any arguments, it simply removes the last element of newItemTracker.
+// .pop() returns the value of the last element. In the example, we store the returned value in a variable removed to be used for later.
+// .pop() is a method that mutates the initial array.
+// When you need to mutate an array by removing the last element, use .pop().
+
+// Instructions
+// 1.
+// Use the .pop() method to remove the last element from chores.
+
+// Checkpoint 2 Passed
+
+// Stuck? Get a hint
+// 2.
+// In a line after you called chores.pop(), log chores to the console to make sure it worked.
+
+
+
+const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
+
+
+
+chores.pop();
+console.log(chores);
+
+ARRAYS
+// More Array Methods
+// There are many more array methods than just .push() and .pop(). You can read about all of the array methods that exist on the Mozilla Developer Network (MDN) array documentation.
+
+// .pop() and .push() mutate the array on which they’re called. However, there are times that we don’t want to mutate the original array and we can use non-mutating array methods. Be sure to check MDN to understand the behavior of the method you are using.
+
+// Some arrays methods that are available to JavaScript developers include: .join(), .slice(), .splice(), .shift(), .unshift(), and .concat() amongst many others. Using these built-in methods make it easier to do some common tasks when working with arrays.
+
+// Below, we will explore some methods that we have not learned yet. We will use these methods to edit a grocery list. As you complete the steps, you can consult the MDN documentation to learn what each method does!
+
+// Instructions
+// 1.
+// Use the .shift() method to remove the first item from the array groceryList.
+
+// Log the new groceryList to the console.
+
+// Read about .shift() at MDN’s shift documentation.
+
+// Checkpoint 2 Passed
+
+// Stuck? Get a hint
+// 2.
+// Under the code added in step 1, use the .unshift() method to add 'popcorn' to the beginning of your grocery list.
+
+// After calling .unshift() on groceryList, log groceryList to the console.
+
+// You may wish to delete the console.log() statement from the previous step.
+
+// Read about .unshift() at MDN’s unshift documentation.
+
+// Checkpoint 3 Passed
+
+// Stuck? Get a hint
+// 3.
+// You’re in a hurry so you decide to ask a friend to help you with your grocery shopping. You want him to pick up the 'bananas', 'coffee beans', and 'brown rice'.
+
+// Under the code you added for step 2, use .slice() to provide your friend with a list of these three things.
+
+// Log this part of the list to the console. Unlike the two previous checkpoints, you should do both of these steps in one line.
+
+// Read about .slice() at MDN’s slice documentation.
+
+// Checkpoint 4 Passed
+
+// Hint
+// Your code will look similar to this:
+
+// console.log(array.method(first, last+1));
+// 4.
+// After calling .slice() on groceryList, log the grocery list to the console one more time.
+
+// Notice that the groceryList array still contains the same items it had in Step 2. That means .slice() is non-mutating! You can confirm this in the link in the previous step.
+
+// Checkpoint 5 Passed
+
+// Stuck? Get a hint
+// 5.
+// Let’s find the index of a particular element in groceryList using .indexOf().
+
+// Call .indexOf() on groceryList to find the index of the element 'pasta' and save the returned value to a const variable named pastaIndex.
+
+// Then log pastaIndex to the console. (You may remove the other console.log() statements to declutter the terminal.)
+
+// Read about .indexOf() at MDN’s indexOf documentation.
+
+
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift();
+// console.log(groceryList);
+
+groceryList.unshift('popcorn');
+// console.log(groceryList);
+
+console.log(groceryList.slice(1,4));
+console.log(groceryList);
+
+const pastaIndex = groceryList.indexOf('pasta') 
+console.log(pastaIndex)
+
+
+
