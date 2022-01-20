@@ -1,0 +1,200 @@
+// ARRAYS
+// Arrays
+// Organizing and storing data is a foundational concept of programming.
+
+// One way we organize data in real life is by making lists. Let’s make one here:
+
+// New Year's Resolutions:
+
+// 1. Keep a journal 
+// 2. Take a falconry class
+// 3. Learn to juggle
+// Let’s now write this list in JavaScript, as an array:
+
+// let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
+// Arrays are JavaScript’s way of making lists. Arrays can store any data types (including strings, numbers, and booleans). Like lists, arrays are ordered, meaning each item has a numbered position.
+
+// Here’s an array of the concepts we’ll cover:
+
+// let concepts = ['creating arrays', 'array structures', 'array manipulation']
+// By the end of this lesson you’ll have another tool under your belt that helps you manage chunks of data!
+
+// Instructions
+// Run the code to see what is logged to the console.
+
+let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
+
+console.log(newYearsResolutions);
+
+
+
+
+ARRAYS
+// Create an Array
+// One way we can create an array is to use an array literal. An array literal creates an array by wrapping items in square brackets []. Remember from the previous exercise, arrays can store any data type — we can have an array that holds all the same data types or an array that holds different data types.
+
+// Diagram outlining an array literal that has 3 separate elements, a comma separates each element (a string, a number, and a boolean) and the elements are wrapped with square brackets
+// Let’s take a closer look at the syntax in the array example:
+
+// The array is represented by the square brackets [] and the content inside.
+// Each content item inside an array is called an element.
+// There are three different elements inside the array.
+// Each element inside the array is a different data type.
+// We can also save an array to a variable. You may have noticed we did this in the previous exercise:
+
+// let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
+// Let’s practice by making an array of our own.
+
+// Instructions
+// 1.
+// Declare a variable using const named hobbies and set it equal to an array with three strings inside of it.
+
+
+// Stuck? Get a hint
+// 2.
+// Use console.log() to print hobbies to the console.
+
+
+const hobbies = ['gaming','photos','foodies'];
+console.log(hobbies)
+
+
+// ARRAYS
+// Accessing Elements
+// Each element in an array has a numbered position known as its index. We can access individual items using their index, which is similar to referencing an item in a list based on the item’s position.
+
+// Arrays in JavaScript are zero-indexed, meaning the positions start counting from 0 rather than 1. Therefore, the first item in an array will be at position 0. Let’s see how we could access an element in an array:
+
+// Diagram outlining how to access the property of an array using the index of the element
+// In the code snippet above:
+
+// cities is an array that has three elements.
+// We’re using bracket notation, [] with the index after the name of the array to access the element.
+// cities[0] will access the element at index 0 in the array cities. You can think of cities[0] as accessing the space in memory that holds the string 'New York'.
+// You can also access individual characters in a string using bracket notation and the index. For instance, you can write:
+
+// const hello = 'Hello World';
+// console.log(hello[6]);
+// // Output: W
+// The console will display W since it is the character that is at index 6.
+
+// Instructions
+// 1.
+// Individual elements in arrays can also be stored to variables.
+
+// Create a variable named listItem and set it equal to the first item in the famousSayings array using square bracket notation ([]).
+
+// Then use console.log() to print the listItem variable to the console.
+
+
+// Stuck? Get a hint
+// 2.
+// Now, console.log() the third element in the famousSayings array using bracket notation to access the element.
+
+// Do not save the element to a new variable before you log it.
+
+
+// Stuck? Get a hint
+// 3.
+// Awesome, you can access each element in an array using the index. But what happens if you try to access an index that is beyond the last element?
+
+// Try to log the item at index [3] of famousSayings to the console. What is logged to the console?
+
+
+const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
+
+const listItem = famousSayings[2];
+console.log(famousSayings[3])
+
+
+
+// ARRAYS
+// Update Elements
+// In the previous exercise, you learned how to access elements inside an array or a string by using an index. Once you have access to an element in an array, you can update its value.
+
+// let seasons = ['Winter', 'Spring', 'Summer', 'Fall'];
+ 
+// seasons[3] = 'Autumn';
+// console.log(seasons); 
+// //Output: ['Winter', 'Spring', 'Summer', 'Autumn']
+// In the example above, the seasons array contained the names of the four seasons.
+
+// However, we decided that we preferred to say 'Autumn' instead of 'Fall'.
+
+// The line, seasons[3] = 'Autumn'; tells our program to change the item at index 3 of the seasons array to be 'Autumn' instead of what is already there.
+
+// Instructions
+// 1.
+// Change the second element of the array groceryList to 'avocados'.
+
+let groceryList = ['bread', 'avocados', 'milk'];
+
+
+ARRAYS
+// Arrays with let and const
+// You may recall that you can declare variables with both the let and const keywords. Variables declared with let can be reassigned.
+
+// Variables declared with the const keyword cannot be reassigned. However, elements in an array declared with const remain mutable. Meaning that we can change the contents of a const array, but cannot reassign a new array or a different value.
+
+// The instructions below will illustrate this concept more clearly. Pay close attention to the similarities and differences between the condiments array and the utensils array as you complete the steps.
+
+// Instructions
+// 1.
+// Below the two existing arrays, re-assign the element in index 0 of condiments to 'Mayo'.
+
+// Log the updated array, condiments, to the console.
+
+
+// Stuck? Get a hint
+// 2.
+// Below your code from Step 1, reassign condiments to be a new array that contains a single string ['Mayo']
+
+// Log the result to the console.
+
+// Notice that you can re-assign elements in an array and re-assign an entire new array to a variable declared using the let keyword.
+
+
+// Stuck? Get a hint
+// 3.
+// Below your code from Step 2, re-assign the last item from the utensils array to 'Spoon'.
+
+// Log the updated array to the console.
+
+
+// 
+
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments[0] = ('Mayo');
+console.log(condiments)
+
+
+// ARRAYS
+// The .length property
+// One of an array’s built-in properties is length and it returns the number of items in the array. We access the .length property just like we do with strings. Check the example below:
+
+// const newYearsResolutions = ['Keep a journal', 'Take a falconry class'];
+ 
+// console.log(newYearsResolutions.length);
+// // Output: 2
+// In the example above, we log newYearsResolutions.length to the console using the following steps:
+
+// We use dot notation, chaining a period with the property name to the array, to access the length property of the newYearsResolutions array.
+// Then we log the length of newYearsResolution to the console.
+// Since newYearsResolution has two elements, so 2 would be logged to the console.
+// When we want to know how many elements are in an array, we can access the .length property.
+
+// Instructions
+// 1.
+// Find the length of the objectives array and log it to the console.
+
+
+
+
+const objectives = ['Learn a new languages', 'Read 52 books', 'Run a marathon'];
+
+console.log(objectives.length)
+
+
